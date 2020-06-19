@@ -24,15 +24,18 @@ def desafio2a(n):
 def desafio2b(n1, n2):
     fat1 = 1
     fat2 = 1
-    while n1:
-        fat1 *= n1
-        n1 -= 1
-    while n2:
-        fat2 *= n2
-        n2 -= 1
-    return fat1 + fat2
+    if n1 > 0 or n2 > 0:
+        while n1:
+            fat1 *= n1
+            n1 -= 1
+        while n2:
+            fat2 *= n2
+            n2 -= 1
+        return fat1 + fat2
+    else:
+        return "falhou"
 
 
 print("desafio 1 = ", desafio1(6))
 print("desafio 2a = ", desafio2a(25))
-print("desafio 2b= ", desafio2b(4, 4))
+print("desafio 2b= ", desafio2b(-1, -1))
