@@ -8,7 +8,7 @@ def desafio1(n):
     return aux
 
 
-def desafio2(n):
+def desafio2a(n):
     if n <= 25:
         return "intervalo [0..25]"
     elif n <= 50:
@@ -21,6 +21,18 @@ def desafio2(n):
         return "fora de intervalo"
 
 
-print("desafio 1 = ", desafio1(6))
-print("desafio 2 = ", desafio2(25))
+def desafio2b(n1, n2):
+    fat1 = 1
+    fat2 = 1
+    while n1:
+        fat1 *= n1
+        n1 -= 1
+    while n2:
+        fat2 *= n2
+        n2 -= 1
+    return fat1 + fat2
 
+
+print("desafio 1 = ", desafio1(6))
+print("desafio 2a = ", desafio2a(25))
+print("desafio 2b= ", desafio2b(4, 4))
